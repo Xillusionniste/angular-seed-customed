@@ -1,0 +1,17 @@
+<p class="breadCrum" ng-click="goBackToMenu()" style="font-weight: bolder; text-align: center;">MENU</p>
+<ul>
+	<li data-ng-repeat="item in breadCrum track by $index">
+		<p class="breadCrum" ng-hide="$index==breadCrum.length-1" ng-click="goBackItem($index)" style="text-align: center;">{{item.name}}</p>
+		<p class="breadCrum" ng-show="$index==breadCrum.length-1" ng-click="goBackItem($index)" style="font-weight: bolder; text-align: center;" >{{item.name}}</p>
+	</li>
+</ul>
+<ul>
+	<li data-ng-repeat="item in menuList track by $index">
+		<!-- BACK BUTTON-->
+		<md-button class="md-raised md-warn" data-ng-click="replaceWithParentList(item)" ng-show="$index==0 && item.parent!=0">retour</md-button>
+
+		<!-- MENU ITEM BUTTONS -->
+		<md-button class="md-raised md-primary" data-ng-click="replaceWithSubList(item)" data-ng-hide="item.subList.length == 0">{{ item.name }}</md-button>
+		<md-button class="md-raised" data-ng-show="item.subList.length == 0">{{ item.name }}</md-button>
+	</li>
+</ul>

@@ -1,0 +1,33 @@
+***Left Sidenav***
+
+_md-locked-open --> Lock la sidenav ouverte, et ajuste le body (sinon le body est masqué)
+
+
+
+
+**Body**
+
+<section .......... >
+	<md-backdrop class="_md-sidenav-backdrop md-opaque ng-scope"></md-backdrop>
+
+
+
+
+**Savoir si une sidenav est ouverte**
+
+$scope.isOpenRight = function(){
+      return $mdSidenav('right').isOpen();
+    };
+
+
+
+
+
+
+
+
+
+*** IDEE POUR LA SIDENAV ***
+TOUJOURS OUVERTE
+
+On change juste le style avec NG-STYLE pour modifier 'max-width' --> Booléen qui change quand on clique sur un bouton

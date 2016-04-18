@@ -1,0 +1,56 @@
+<div ng-controller="AppCtrl">
+  <md-component >
+      <md-sidenav id="custom-sidenav" class="md-sidenav-left" ng-style="sidenavState && {'margin-left':'-270px'} || {'margin-left':'-115px'}" 
+      md-component-id="left" md-is-locked-open="true" md-disable-backdrop="" md-whiteframe="4">
+
+        <md-toolbar class="md-theme-indigo" style="background-color: #991F3D;">
+          <h1 style="margin-left: 120px;" class="md-toolbar-tools">Menu</h1>
+        </md-toolbar>
+
+        <md-content style="margin-left: 110px; background-color: #E31937;" md-theme="" layout-gt-sm="row" layout-padding ng-show="!sidenavState"
+          class="check-element sample-show-hide">
+          <div>
+            <md-input-container>
+              <label>Rechercher</label>
+              <input ng-model="user.title">
+            </md-input-container>
+            <div menu-super-cool></div>
+          </div>
+
+        </md-content>
+
+        <md-container style="margin-left: 268px; margin-top: 80px;" id="custom-container" class="md-toolbar-tools" ng-show="sidenavState">
+          <md-button id="menu-button" class="md-icon-button md-primary" ng-click="sidenavState = !sidenavState" aria-label="Effectuer une recherche">
+              <md-icon md-svg-src="app/images/ic_search_white_24px.svg"></md-icon>
+          </md-button>
+        </md-container>
+      </md-sidenav>
+  </md-component>
+
+  <md-toolbar id="custom-toolbar" ng-style="!sidenavState && {'margin-left':'206px'}">
+      <md-container id="custom-container" class="md-toolbar-tools" data-layout="row" ng-style="sidenavState && {'margin-left':'50px'}" >
+        <md-button id="menu-button" class="md-icon-button md-primary" ng-click="sidenavState = !sidenavState" aria-label="Redimensionner la sidenav">
+            <md-icon md-svg-src="{{ sidenavState ? 'app/images/ic_menu_white_24px.svg' : 'app/images/ic_clear_white_24px.svg'}}"></md-icon>
+        </md-button>
+          <span class="title">OFv4</span>
+          <span flex></span>
+      </md-container>
+  </md-toolbar>
+
+  <div layout="column" ng-cloak="" flex="">
+    <!-- <section layout="row" flex=""> -->
+      <md-content layout-padding="" style="">
+        <h3>Main Area</h3>
+      </md-content>
+    <!-- </section> -->
+  </div>
+</div>
+
+
+
+  <!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
+
+

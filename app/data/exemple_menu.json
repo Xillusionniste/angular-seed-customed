@@ -1,0 +1,23 @@
+{
+	"menu" :[{
+		"name":"Exemple1",
+		"subList" : [{
+			"name":"Item1",
+			"subList" : [{
+				"name":"SubItem1",
+				"link":"????"
+			},{
+				"name":"SubItem1",
+				"link":"????"
+			}]
+		},{
+			"name":"Item2",
+			"subList" : [{
+				"name":"SubItem1bis",
+				"link":"????"
+			}]
+		}]
+	},{
+		"name":"Exemple2"
+	}]
+}
